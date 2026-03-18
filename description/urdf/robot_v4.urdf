@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="robot_v4">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="5.19808910696973E-06 0.0437851037954019 -0.0153253924126023"
+        rpy="0 0 0" />
+      <mass
+        value="0.174534133721049" />
+      <inertia
+        ixx="0.000570984216603055"
+        ixy="-5.14757418568898E-08"
+        ixz="4.36575566860176E-09"
+        iyy="0.000304543568767031"
+        iyz="1.28507634128189E-06"
+        izz="0.00085183392134648" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file:///home/ubuntu/turtlebot4_ws/src/alienbot_description/stls/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.843137254901961 1 0.474509803921569 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file:///home/ubuntu/turtlebot4_ws/src/alienbot_description/stls/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="wheel_left">
+    <inertial>
+      <origin
+        xyz="0.00514407681200836 8.17349660175992E-14 3.4527242176452E-13"
+        rpy="0 0 0" />
+      <mass
+        value="0.0230128273536347" />
+      <inertia
+        ixx="1.02741165685969E-05"
+        ixy="4.93112109414468E-18"
+        ixz="1.58344484239909E-16"
+        iyy="5.38345473022304E-06"
+        iyz="8.36994144596132E-23"
+        izz="5.38345473022304E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file:///home/ubuntu/turtlebot4_ws/src/alienbot_description/stls/wheel_left.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file:///home/ubuntu/turtlebot4_ws/src/alienbot_description/stls/wheel_left.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="wheel_left_joint"
+    type="continuous">
+    <origin
+      xyz="0.0725550532863032 0.0249218786292363 -0.0402038669112"
+      rpy="1.5707963267949 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="wheel_left" />
+    <axis
+      xyz="1 0 0" />
+  </joint>
+  <link
+    name="wheel_right">
+    <inertial>
+      <origin
+        xyz="-0.00514407681092399 -1.85615411929518E-16 -5.59760571228196E-14"
+        rpy="0 0 0" />
+      <mass
+        value="0.0230128273536347" />
+      <inertia
+        ixx="1.02741165685969E-05"
+        ixy="-9.4076948243907E-22"
+        ixz="5.16558998090434E-17"
+        iyy="5.38345473022305E-06"
+        iyz="-8.85868020771683E-33"
+        izz="5.38345473022305E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file:///home/ubuntu/turtlebot4_ws/src/alienbot_description/stls/wheel_right.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file:///home/ubuntu/turtlebot4_ws/src/alienbot_description/stls/wheel_right.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="wheel_right_joint"
+    type="continuous">
+    <origin
+      xyz="-0.0725550532790476 0.0249218786307316 -0.0402038669083703"
+      rpy="1.5707963267949 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="wheel_right" />
+    <axis
+      xyz="1 0 0" />
+  </joint>
+  <link
+    name="laser">
+    <inertial>
+      <origin
+        xyz="1.12248706154588E-05 0.0070553880342903 -0.000411928460549202"
+        rpy="0 0 0" />
+      <mass
+        value="0.0906117336671421" />
+      <inertia
+        ixx="3.84604441634889E-05"
+        ixy="-4.2558728683437E-09"
+        ixz="3.65451628461208E-23"
+        iyy="2.36685042604634E-05"
+        iyz="3.38622892628115E-22"
+        izz="5.9884120285993E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file:///home/ubuntu/turtlebot4_ws/src/alienbot_description/stls/lidar.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file:///home/ubuntu/turtlebot4_ws/src/alienbot_description/stls/lidar.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="laser_joint"
+    type="fixed">
+    <origin
+      xyz="0 0.0155312690459461 0.055853305909985"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="laser" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="camera">
+    <inertial>
+      <origin
+        xyz="3.46944695195361E-17 -0.000483315503227374 -0.0120319760925751"
+        rpy="0 0 0" />
+      <mass
+        value="0.0618368133993102" />
+      <inertia
+        ixx="6.40411177159323E-06"
+        ixy="1.42688655665397E-20"
+        ixz="8.27180612553028E-22"
+        iyy="5.28295786978196E-05"
+        iyz="5.52113490476279E-22"
+        izz="5.22621521125044E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file:///home/ubuntu/turtlebot4_ws/src/alienbot_description/stls/camera.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file:///home/ubuntu/turtlebot4_ws/src/alienbot_description/stls/camera.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="camera_joint"
+    type="fixed">
+    <origin
+      xyz="0 -0.102735934689195 0.0173275485336867"
+      rpy="1.5707963267949 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="camera" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="wing_left">
+    <inertial>
+      <origin
+        xyz="0.0202267783404892 -0.0171927414394959 -0.0447062400052274"
+        rpy="0 0 0" />
+      <mass
+        value="0.11060024558919" />
+      <inertia
+        ixx="0.000281328199783063"
+        ixy="3.54233602560415E-05"
+        ixz="-4.85584364238968E-05"
+        iyy="0.000325061413175145"
+        iyz="8.69472145461827E-06"
+        izz="0.000124524676915511" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file:///home/ubuntu/turtlebot4_ws/src/alienbot_description/stls/wing_left.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file:///home/ubuntu/turtlebot4_ws/src/alienbot_description/stls/wing_left.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="wing_left_joint"
+    type="continuous">
+    <origin
+      xyz="0.051772 0 0.048599"
+      rpy="1.5708 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="wing_left" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="wing_right">
+    <inertial>
+      <origin
+        xyz="-0.0202320893781205 -0.0171966751818292 -0.044652227528606"
+        rpy="0 0 0" />
+      <mass
+        value="0.110625066259541" />
+      <inertia
+        ixx="0.000281322856539884"
+        ixy="-3.54088818869772E-05"
+        ixz="4.85696125242764E-05"
+        iyy="0.000325070060335027"
+        iyz="8.71563217470177E-06"
+        izz="0.000124502471522257" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file:///home/ubuntu/turtlebot4_ws/src/alienbot_description/stls/wing_right.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file:///home/ubuntu/turtlebot4_ws/src/alienbot_description/stls/wing_right.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="wing_right_joint"
+    type="continuous">
+    <origin
+      xyz="-0.051772 0 0.048599"
+      rpy="1.5708 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="wing_right" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+</robot>

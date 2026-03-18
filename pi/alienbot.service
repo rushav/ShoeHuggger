@@ -1,0 +1,15 @@
+[Unit]
+Description=AlienBot Bringup Service
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=ubuntu
+ExecStart=/home/ubuntu/start_alienbot.sh
+Restart=on-failure
+RestartSec=5
+Environment="HOME=/home/ubuntu"
+
+[Install]
+WantedBy=multi-user.target

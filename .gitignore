@@ -1,0 +1,10 @@
+build/
+install/
+log/
+__pycache__/
+*.pyc
+.ros/
+*.bag
+*.db3
+yolov8n.pt
+yolov8n-pose.pt

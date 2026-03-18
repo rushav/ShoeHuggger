@@ -1,0 +1,23 @@
+{
+  "name": "AlienBot Dev Container",
+  "dockerFile": "Dockerfile",
+  "runArgs": [
+    "--privileged",
+    "--network=host",
+    "-e", "DISPLAY=${localEnv:DISPLAY}"
+  ],
+  "workspaceMount": "source=${localWorkspaceFolder},target=/home/ubuntu/turtlebot4_ws,type=bind",
+  "workspaceFolder": "/home/ubuntu/turtlebot4_ws",
+  "mounts": [
+    "source=/tmp/.X11-unix,target=/tmp/.X11-unix,type=bind"
+  ],
+  "postCreateCommand": "cd /home/ubuntu/turtlebot4_ws && colcon build --symlink-install",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "ms-toolsai.jupyter"
+      ]
+    }
+  }
+}
