@@ -9,7 +9,7 @@ AlienBot is a personal butler/pet robot built on a modified TurtleBot3 Waffle pl
 
 ### Demo Video
 <!-- PLACEHOLDER: Add link to demo video -->
-[Watch the demo video](https://youtube.com/your-video-link)
+[Watch the demo video]([https://youtube.com/your-video-link](https://youtu.be/eQ_k0fX2IQM))
 
 ## Features
 
