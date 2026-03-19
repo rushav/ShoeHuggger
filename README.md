@@ -1,6 +1,6 @@
 # ShoeHugger
 
-![ShoeHugger](media/Real_Orthographic.JPG)
+![ShoeHugger](media/Real Orthographic.JPG)
 <!-- PLACEHOLDER: Replace with actual photo of ShoeHugger -->
 
 ## About
