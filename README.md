@@ -47,12 +47,12 @@ ShoeHugger is a personal butler/pet robot built on a modified TurtleBot3 Waffle 
 +---------------------+     WiFi (ROS2 DDS)     +----------------------+
 |   Raspberry Pi 4    |<------------------------>|   Laptop (Docker)    |
 |                     |     ROS_DOMAIN_ID=117    |                      |
-|ShoeHugger_bringup.py|                          | person_follower.py   |
+|alienbot_bringup.py|                          | person_follower.py   |
 |  +- /cmd_vel (sub)  |                          |  +- /cmd_vel (pub)   |
 |  +- /joint_states   |                          |  +- /wing_flap_speed |
 |  +- /tf (odom->base)|                          |  +- /follower_image  |
 |  +- /imu            |                          |                      |
-|  +- /odom           |                          | ShoeHugger_ui.py     |
+|  +- /odom           |                          | alienbot_ui.py     |
 |  +- /wing_flap_speed|                          | teleop_hold.py       |
 |                     |                          | rviz2 + slam_toolbox |
 | usb_cam_node        |                          +----------------------+
@@ -72,8 +72,8 @@ ShoeHugger is a personal butler/pet robot built on a modified TurtleBot3 Waffle 
 
 ### 1. Clone the repository
 ```bash
-git clone https://github.com/YOUR_USERNAME/ShoeHugger.git
-cd ShoeHugger
+git clone https://github.com/YOUR_USERNAME/alienbot.git
+cd alienbot
 ```
 
 ### 2. Open in Dev Container
@@ -89,15 +89,15 @@ source install/setup.bash
 ### 4. Set up the Raspberry Pi
 Copy the Pi files and enable auto-start:
 ```bash
-scp pi/ShoeHugger_bringup.py ubuntu@<PI_IP>:~/ShoeHugger_bringup.py
-scp pi/start_ShoeHugger.sh ubuntu@<PI_IP>:~/start_ShoeHugger.sh
-scp pi/ShoeHugger.service ubuntu@<PI_IP>:~/ShoeHugger.service
+scp pi/alienbot_bringup.py ubuntu@<PI_IP>:~/alienbot_bringup.py
+scp pi/start_alienbot.sh ubuntu@<PI_IP>:~/start_alienbot.sh
+scp pi/alienbot.service ubuntu@<PI_IP>:~/alienbot.service
 ssh ubuntu@<PI_IP>
-chmod +x ~/start_ShoeHugger.sh
-sudo cp ~/ShoeHugger.service /etc/systemd/system/
+chmod +x ~/start_alienbot.sh
+sudo cp ~/alienbot.service /etc/systemd/system/
 sudo systemctl daemon-reload
-sudo systemctl enable ShoeHugger
-sudo systemctl start ShoeHugger
+sudo systemctl enable alienbot
+sudo systemctl start alienbot
 ```
 
 Pi dependencies:
@@ -113,7 +113,7 @@ Flash the modified GIX firmware using Arduino IDE. See `firmware/README.md` for 
 
 ### One-Command Launch (Laptop)
 ```bash
-./launch/launch_ShoeHugger.sh
+./launch/launch_alienbot.sh
 ```
 This opens the control UI and RViz with SLAM. Use the UI buttons or keyboard shortcuts:
 
