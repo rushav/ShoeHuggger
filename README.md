@@ -47,12 +47,12 @@ ShoeHugger is a personal butler/pet robot built on a modified TurtleBot3 Waffle 
 +---------------------+     WiFi (ROS2 DDS)     +----------------------+
 |   Raspberry Pi 4    |<------------------------>|   Laptop (Docker)    |
 |                     |     ROS_DOMAIN_ID=117    |                      |
-| ShoeHugger_bringup.py |                          | person_follower.py   |
+|ShoeHugger_bringup.py|                          | person_follower.py   |
 |  +- /cmd_vel (sub)  |                          |  +- /cmd_vel (pub)   |
 |  +- /joint_states   |                          |  +- /wing_flap_speed |
 |  +- /tf (odom->base)|                          |  +- /follower_image  |
 |  +- /imu            |                          |                      |
-|  +- /odom           |                          | ShoeHugger_ui.py       |
+|  +- /odom           |                          | ShoeHugger_ui.py     |
 |  +- /wing_flap_speed|                          | teleop_hold.py       |
 |                     |                          | rviz2 + slam_toolbox |
 | usb_cam_node        |                          +----------------------+
