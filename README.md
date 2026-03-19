@@ -1,11 +1,11 @@
-# AlienBot
+# ShoeHugger
 
-![AlienBot](media/robot_photo.jpg)
-<!-- PLACEHOLDER: Replace with actual photo of AlienBot -->
+![ShoeHugger](media/Real_Orthographic.JPG)
+<!-- PLACEHOLDER: Replace with actual photo of ShoeHugger -->
 
 ## About
 
-AlienBot is a personal butler/pet robot built on a modified TurtleBot3 Waffle platform for TECHIN 516 at UW GIX (Winter 2025). It uses YOLOv8 pose estimation to detect and follow people by tracking ankle keypoints, features motorized wings that flap based on proximity, and avoids obstacles using LiDAR reactive avoidance.
+ShoeHugger is a personal butler/pet robot built on a modified TurtleBot3 Waffle platform for TECHIN 516 at UW GIX (Winter 2025). It uses YOLOv8 pose estimation to detect and follow people by tracking ankle keypoints, features motorized wings that flap based on proximity, and avoids obstacles using LiDAR reactive avoidance.
 
 ### Demo Video
 <!-- PLACEHOLDER: Add link to demo video -->
@@ -47,12 +47,12 @@ AlienBot is a personal butler/pet robot built on a modified TurtleBot3 Waffle pl
 +---------------------+     WiFi (ROS2 DDS)     +----------------------+
 |   Raspberry Pi 4    |<------------------------>|   Laptop (Docker)    |
 |                     |     ROS_DOMAIN_ID=117    |                      |
-| alienbot_bringup.py |                          | person_follower.py   |
+| ShoeHugger_bringup.py |                          | person_follower.py   |
 |  +- /cmd_vel (sub)  |                          |  +- /cmd_vel (pub)   |
 |  +- /joint_states   |                          |  +- /wing_flap_speed |
 |  +- /tf (odom->base)|                          |  +- /follower_image  |
 |  +- /imu            |                          |                      |
-|  +- /odom           |                          | alienbot_ui.py       |
+|  +- /odom           |                          | ShoeHugger_ui.py       |
 |  +- /wing_flap_speed|                          | teleop_hold.py       |
 |                     |                          | rviz2 + slam_toolbox |
 | usb_cam_node        |                          +----------------------+
@@ -72,8 +72,8 @@ AlienBot is a personal butler/pet robot built on a modified TurtleBot3 Waffle pl
 
 ### 1. Clone the repository
 ```bash
-git clone https://github.com/YOUR_USERNAME/AlienBot.git
-cd AlienBot
+git clone https://github.com/YOUR_USERNAME/ShoeHugger.git
+cd ShoeHugger
 ```
 
 ### 2. Open in Dev Container
@@ -89,15 +89,15 @@ source install/setup.bash
 ### 4. Set up the Raspberry Pi
 Copy the Pi files and enable auto-start:
 ```bash
-scp pi/alienbot_bringup.py ubuntu@<PI_IP>:~/alienbot_bringup.py
-scp pi/start_alienbot.sh ubuntu@<PI_IP>:~/start_alienbot.sh
-scp pi/alienbot.service ubuntu@<PI_IP>:~/alienbot.service
+scp pi/ShoeHugger_bringup.py ubuntu@<PI_IP>:~/ShoeHugger_bringup.py
+scp pi/start_ShoeHugger.sh ubuntu@<PI_IP>:~/start_ShoeHugger.sh
+scp pi/ShoeHugger.service ubuntu@<PI_IP>:~/ShoeHugger.service
 ssh ubuntu@<PI_IP>
-chmod +x ~/start_alienbot.sh
-sudo cp ~/alienbot.service /etc/systemd/system/
+chmod +x ~/start_ShoeHugger.sh
+sudo cp ~/ShoeHugger.service /etc/systemd/system/
 sudo systemctl daemon-reload
-sudo systemctl enable alienbot
-sudo systemctl start alienbot
+sudo systemctl enable ShoeHugger
+sudo systemctl start ShoeHugger
 ```
 
 Pi dependencies:
@@ -113,7 +113,7 @@ Flash the modified GIX firmware using Arduino IDE. See `firmware/README.md` for 
 
 ### One-Command Launch (Laptop)
 ```bash
-./launch/launch_alienbot.sh
+./launch/launch_ShoeHugger.sh
 ```
 This opens the control UI and RViz with SLAM. Use the UI buttons or keyboard shortcuts:
 
